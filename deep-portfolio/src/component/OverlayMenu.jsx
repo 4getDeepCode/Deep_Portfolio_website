@@ -4,6 +4,7 @@ import { FiX } from "react-icons/fi";
 const OverlayMenu = ({ isOpen, onClose }) => {
   const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
   const origin = isMobile ? "95% 8%" : "50% 8%";
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -13,12 +14,12 @@ const OverlayMenu = ({ isOpen, onClose }) => {
           animate={{ clipPath: `circle(150% at ${origin})` }}
           exit={{ clipPath: `circle(0% at ${origin})` }}
           transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
-          style={{ backgroundColor: "rgba(0,0,0,0.95)" }}
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.95)" }} // black
         >
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 text-white text-3xl"
+            className="absolute top-6 right-6 text-yellow-400 text-3xl"
             aria-label="Close menu"
           >
             <FiX />
@@ -44,7 +45,7 @@ const OverlayMenu = ({ isOpen, onClose }) => {
                 <a
                   href={`#${item.toLowerCase()}`}
                   onClick={onClose}
-                  className="text-4xl text-white font-semibold hover:text-pink-400 transition-colors duration-300"
+                  className="text-4xl text-white font-semibold hover:text-yellow-400 transition-colors duration-300"
                 >
                   {item}
                 </a>

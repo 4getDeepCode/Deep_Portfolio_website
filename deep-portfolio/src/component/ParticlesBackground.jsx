@@ -8,7 +8,14 @@ const ParticleBackground = () => {
     const ctx = canvas.getContext("2d");
     let particles = [];
     const particleCount = 50;
-    const colors = ["rgba(255, 255, 255, 0.7)"];
+
+    // UI color palette: white, black, yellow, gray
+    const colors = [
+      "rgba(255, 255, 255, 0.7)", // white
+      "rgba(0, 0, 0, 0.6)", // black
+      "rgba(250, 204, 21, 0.7)", // yellow
+      "rgba(156, 163, 175, 0.7)", // gray
+    ];
 
     class Particle {
       constructor() {

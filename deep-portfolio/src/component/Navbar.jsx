@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import Logo from "../assets/Logo.png";
 import OverlayMenu from "./OverlayMenu";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [visible, setVisible] = useState(true);
@@ -80,7 +81,7 @@ const Navbar = () => {
         <div className="block lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
           <button
             onClick={() => setMenuOpen(true)}
-            className="text-white text-3xl focus:outline-none"
+            className="text-yellow-400 text-3xl focus:outline-none"
             aria-label="Open menu"
           >
             <FiMenu />
@@ -91,7 +92,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <a
             href="#contact"
-            className="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:opacity-90 transition-opacity duration-300"
+            className="bg-yellow-400 text-black px-5 py-2 rounded-full font-medium shadow-lg hover:bg-yellow-300 transition-colors duration-300"
           >
             Reach Out
           </a>

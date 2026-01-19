@@ -23,7 +23,7 @@ const CustomCursor = () => {
     >
       <div
         className="w-20 h-20 rounded-full 
-                   bg-gradient-to-r from-pink-500 to-blue-500 
+                   bg-gradient-to-r from-yellow-400 via-white to-gray-400 
                    blur-3xl opacity-80"
       />
     </div>
