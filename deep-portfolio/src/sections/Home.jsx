@@ -104,7 +104,7 @@ const Home = React.forwardRef((props, ref) => {
       <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2">
         {/* left */}
         <motion.div
-          className="flex flex-col justify-center h-full text-center lg:text-left relative mt-10 ml-35"
+          className="flex flex-col justify-center h-full text-center lg:text-left relative mt-10 pl-10"
           initial={{ opacity: 0, y: 120 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
@@ -173,11 +173,11 @@ const Home = React.forwardRef((props, ref) => {
         </motion.div>
 
         {/* right */}
-        <motion.div className="relative hidden lg:block">
+        <motion.div className="relative hidden lg:flex items-center justify-end">
           <div
             className="absolute top-1/2 -translate-y-1/2 pointer-events-none"
             style={{
-              right: "10px",
+              right: "8px",
               width: "min(22vw, 410px)",
               height: "min(40vw, 760px)",
               borderRadius: "50%",

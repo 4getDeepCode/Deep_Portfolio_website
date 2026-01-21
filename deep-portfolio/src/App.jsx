@@ -1,4 +1,6 @@
+import { useState } from "react";
 import CustomCursor from "./component/CustomCursor";
+import IntroAnimation from "./component/IntroAnimation";
 import Navbar from "./component/Navbar";
 import ParticleBackground from "./component/ParticlesBackground";
 import About from "./sections/About";
@@ -11,11 +13,14 @@ import Skills from "./sections/Skills";
 import Testimonials from "./sections/Testimonials";
 
 function App() {
+  const [introDone, setIntroDone] = useState(false);
   return (
     <div className="relative animated-gradient text-white ">
       <CustomCursor />
       <ParticleBackground />
       <Navbar />
+      {/* Intro always on top until it finishes */}
+      {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
       <Home />
       <About />
       <Skills />
