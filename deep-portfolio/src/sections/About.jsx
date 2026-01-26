@@ -37,8 +37,10 @@ const About = () => {
 
           {/* content */}
           <div className="flex-1 flex flex-col justify-center text-center md:text-left">
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent 
-                           bg-gradient-to-r from-yellow-400 via-white to-gray-400">
+            <h2
+              className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent 
+                           bg-gradient-to-r from-yellow-400 via-white to-gray-400"
+            >
               Deep Chand
             </h2>
 
@@ -47,9 +49,11 @@ const About = () => {
             </p>
 
             <p className="mt-2 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
-              I specialize in crafting modern, scalable applications with a strong focus on clean code, performance, and great UX.
-              Using tools like JavaScript, React, TypeScript, Tailwind CSS, and FastAPI, I bring concepts to life through reliable
-              backends and polished interfaces.
+              I specialize in crafting modern, scalable applications with a
+              strong focus on clean code, performance, and great UX. Using tools
+              like JavaScript, React, TypeScript, Tailwind CSS, and FastAPI, I
+              bring concepts to life through reliable backends and polished
+              interfaces.
             </p>
 
             {/* stats */}
@@ -106,11 +110,13 @@ const About = () => {
               About Me
             </h3>
             <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
-              I’m a Software Developer and Content Creator who builds fast, resilient web applications
-              and shares practical coding insights on Instagram and YouTube.
+              I’m a Software Developer and Content Creator who builds fast,
+              resilient web applications and shares practical coding insights on
+              Instagram and YouTube.
             </p>
             <p className="mt-2 text-gray-400 text-base sm:text-lg">
-              I’m passionate about transforming ideas into scalable, intuitive products that make a difference.
+              I’m passionate about transforming ideas into scalable, intuitive
+              products that make a difference.
             </p>
           </motion.div>
         </div>
