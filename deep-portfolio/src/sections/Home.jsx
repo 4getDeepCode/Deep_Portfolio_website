@@ -126,7 +126,9 @@ const Home = React.forwardRef((props, ref) => {
             >
               Hello, I&apos;m
               <br />
-              <span className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:whitespace-nowrap">
+              <span className=" 
+              bg-clip-text  text-transparent bg-gradient-to-r from-yellow-400 
+              font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:whitespace-nowrap">
                 Deep Chand
               </span>
             </motion.h1>
@@ -157,18 +159,24 @@ const Home = React.forwardRef((props, ref) => {
               </a>
             </motion.div>
 
-            {/* socials */}
-            <motion.div className="mt-6 flex gap-5 text-2xl md:text-3xl justify-center lg:justify-start">
+            <div className="flex gap-5 mt-6  text-2xl md:text-3xl justify-center lg:justify-start text-yellow-400">
               {socials.map(({ Icon, label, href }) => (
                 <motion.a
                   key={label}
                   href={href}
-                  className="text-gray-300 hover:text-yellow-400 transition-colors"
+                  aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variants={glowVariants}
+                  initial="initial"
+                  whileHover="hover"
+                  whileTap="tap"
+                  className="text-yellow-400 hover:text-white transition-colors duration-200"
                 >
                   <Icon />
                 </motion.a>
               ))}
-            </motion.div>
+            </div>
           </div>
         </motion.div>
 

@@ -78,7 +78,7 @@ const Projects = () => {
         transition: "background-color 400ms ease",
       }}
     >
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-black">
         <h2
           className={`text-4xl mt-5 sm:text-5xl font-bold 
                    bg-clip-text text-transparent 
@@ -90,14 +90,15 @@ const Projects = () => {
         </h2>
 
         <div
-          className={`relative w-full flex-1 flex items-center justify-center ${
+          className={`relative w-full flex-1 flex items-center justify-center  ${
             isMobile ? "-mt-4" : "mt-16"
           }`}
         >
           {projects.map((project, idx) => (
             <div
               key={project.title}
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ${
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 
+                ${
                 activeIndex === idx
                   ? "opacity-100 z-20"
                   : "opacity-0 z-0 sm:z-10"
@@ -113,7 +114,7 @@ const Projects = () => {
                     exit={{ opacity: 0, y: 30 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                     className={`block text-center text-[clamp(1.5rem,4vw,3.2rem)]
-                      text-white sm:absolute sm:-top-21 sm:left-[35%] lg:left-[-5%]
+                     bg-clip-text  text-transparent bg-gradient-to-r from-yellow-400 via-white to-gray-400 sm:absolute sm:-top-21 sm:left-[35%] lg:left-[-5%]
                       font-bangers italic font-semibold ${
                         isMobile ? "-mt-25" : ""
                       }`}

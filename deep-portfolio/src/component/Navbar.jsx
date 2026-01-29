@@ -72,7 +72,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src={Logo} alt="Logo" className="w-8 h-8" />
-          <div className="text-2xl font-bold text-white hidden sm:block">
+          <div className="text-2xl font-bold text-yellow-400 hidden sm:block">
             Deep
           </div>
         </div>
