@@ -71,7 +71,7 @@ const Projects = () => {
     <section
       id="projects"
       ref={sceneRef}
-      className="relative text-white"
+      className="relative text-white bg-black"
       style={{
         height: `${100 * projects.length}vh`,
         backgroundColor: activeProject.bgColor,
@@ -128,7 +128,7 @@ const Projects = () => {
               </AnimatePresence>
 
               <div
-                className={`relative w-full overflow-hidden bg-gray-900 shadow-2xl ${
+                className={`relative w-full overflow-hidden bg-black shadow-2xl ${
                   isMobile ? "mb-6 rounded-lg" : "mb-10 sm:mb-12 rounded-xl"
                 } h-[62vh] sm:h-[66vh]`}
                 style={{ zIndex: 10 }}
@@ -152,7 +152,10 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className={`absolute ${isMobile ? "bottom-20" : "bottom-2"}`}>
+        <div 
+        className={`absolute ${isMobile ? "bottom-20" : "bottom-2"} z-50 pointer-events-auto`}
+        
+        >
           <a
             href={activeProject?.link}
             target="_blank"
