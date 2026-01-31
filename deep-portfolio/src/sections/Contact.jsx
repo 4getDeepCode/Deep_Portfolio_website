@@ -65,7 +65,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative min-h-screen bg-black overflow-hidden text-white flex items-center justify-center px-6"
+      className="relative min-h-screen bg-black overflow-x-hidden text-white flex items-center justify-center"
     >
       <ParticlesBackground />
 
@@ -83,25 +83,24 @@ const Contact = () => {
         Contact Us
       </h2>
 
-      <div className="relative z-10 w-full max-w-6xl pt-24 grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-10">
+      <div
+        className="relative z-10 w-full max-w-6xl pt-24 grid grid-cols-1 md:grid-cols-2 gap-10 items-center place-items-center md:place-items-stretch
+    mb-10 mb-10"
+      >
         {/* FORM */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="
-            relative rounded-2xl p-8
-            bg-white/5 backdrop-blur-xl
-            border border-white/10
-            shadow-[0_0_30px_rgba(250,204,21,0.15)]
-          "
+          className=" relative rounded-2xl p-5 sm:p-8 w-full max-w-md sm:max-w-lg mx-auto bg-white/5 backdrop-blur-xl
+                       border border-white/10 shadow-[0_0_30px_rgba(250,204,21,0.15)] "
         >
           <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-yellow-400 to-orange-400" />
 
           <h3
             className="
-              text-3xl font-semibold mb-6
+              text-3xl font-semibold mb-6 text-center md:text-left
               bg-clip-text text-transparent
               bg-gradient-to-r from-yellow-400 via-white to-gray-400
             "
@@ -109,7 +108,7 @@ const Contact = () => {
             Let’s Work Together
           </h3>
 
-          <form onSubmit={handleSubmit} className="grid gap-4">
+          <form onSubmit={handleSubmit} className="grid gap-4 ">
             <input
               type="text"
               name="name"
@@ -145,9 +144,6 @@ const Contact = () => {
               </option>
               <option value="Web Development" className="text-black">
                 Web Development
-              </option>
-              <option value="Mobile Application" className="text-black">
-                Mobile Application
               </option>
               <option value="Other" className="text-black">
                 Other

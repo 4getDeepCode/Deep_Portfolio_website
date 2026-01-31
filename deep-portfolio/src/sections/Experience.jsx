@@ -179,7 +179,7 @@ const Experience = () => {
         style={{ height: `${SCENE_HEIGHT_VH}vh`, minHeight: "120vh" }}
         className="relative"
       >
-        <div className="sticky top-0 h-screen flex flex-col">
+        <div className="sticky top-0 min-h-screen md:h-screen flex flex-col">
           {/* Heading */}
           <div className="shrink-0 px-4 pt-6 flex justify-center">
             <h2
@@ -222,7 +222,7 @@ const Experience = () => {
             </div>
 
             {/* Mobile */}
-            <div className="relative w-full max-w-md md:hidden">
+            <div className="relative w-full max-w-md md:hidden overflow-visible">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-gray-700/40 rounded">
                 <motion.div
                   className="absolute top-0 left-0 w-[6px] bg-yellow-400 rounded origin-top"
@@ -230,7 +230,7 @@ const Experience = () => {
                 />
               </div>
 
-              <div className="relative flex flex-col gap-10 ml-10 mt-6 pb-28">
+              <div className="relative flex flex-col gap-10 ml-10 mt-6 pb-10">
                 {experiences.map((exp, idx) => {
                   const start = idx === 0 ? 0 : thresholds[idx - 1];
                   const end = thresholds[idx];

@@ -19,7 +19,6 @@ function App() {
       <CustomCursor />
       <ParticleBackground />
       <Navbar />
-      {/* Intro always on top until it finishes */}
       {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
       <Home />
       <About />

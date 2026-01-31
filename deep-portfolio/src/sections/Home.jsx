@@ -73,7 +73,7 @@ const Home = React.forwardRef((props, ref) => {
     return () => clearTimeout(timeout);
   }, [subIndex, deleting, index, roles]);
   return (
-    <section className="w-full h-screen relative overflow-hidden bg-black">
+    <section className="w-full min-h-screen relative overflow-hidden bg-black">
       <ParticleBackground />
 
       <div className="absolute inset-0">
@@ -101,10 +101,13 @@ const Home = React.forwardRef((props, ref) => {
         />
       </div>
 
-      <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2">
+      <div
+        // className="relative z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2"
+        className="relative z-10 min-h-screen w-full max-w-7xl mx-auto px-4 sm:pt-0 sm:pb-0 grid grid-cols-1 lg:grid-cols-2"
+      >
         {/* left */}
         <motion.div
-          className="flex flex-col justify-center h-full text-center lg:text-left relative mt-10 pl-10"
+          className="flex flex-col justify-center  text-center lg:text-left relative mt-10 "
           initial={{ opacity: 0, y: 120 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
@@ -126,18 +129,20 @@ const Home = React.forwardRef((props, ref) => {
             >
               Hello, I&apos;m
               <br />
-              <span className=" 
+              <span
+                className=" 
               bg-clip-text  text-transparent bg-gradient-to-r from-yellow-400 
-              font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:whitespace-nowrap">
+              font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:whitespace-nowrap"
+              >
                 Deep Chand
               </span>
             </motion.h1>
 
             {/* description */}
             <motion.p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
-              I turn complex ideas into seamless, high-impact web experiences —
-              building modern, scalable, and lightning-fast applications that
-              make a difference.
+              I transform complex ideas into seamless web experiences by
+              developing modern, scalable, and lightning-fast full-stack
+              applications using the MERN stack.
             </motion.p>
 
             {/* buttons */}
@@ -159,7 +164,7 @@ const Home = React.forwardRef((props, ref) => {
               </a>
             </motion.div>
 
-            <div className="flex gap-5 mt-6  text-2xl md:text-3xl justify-center lg:justify-start text-yellow-400">
+            <div className="flex gap-5 mt-6  text-2xl sm:mb-0 md:text-3xl justify-center lg:justify-start text-yellow-400">
               {socials.map(({ Icon, label, href }) => (
                 <motion.a
                   key={label}

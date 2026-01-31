@@ -27,7 +27,7 @@ const Skills = () => {
     { icon: <DiNodejsSmall />, name: "Node.js" },
     { icon: <SiExpress />, name: "Express.js" },
     { icon: <SiMongodb />, name: "MongoDB" },
-    { icon: <SiMysql />, name: "MongoDB" },
+    { icon: <SiMysql />, name: "MySQL" },
   ];
 
   const repeated = [...skills, ...skills];
@@ -129,7 +129,7 @@ const Skills = () => {
       </motion.h2>
 
       <motion.p
-        className="mt-2 mb-8 text-gray-300 text-base sm:text-lg z-10"
+        className="mt-2 mb-8 text-gray-300 text-center text-base sm:text-lg z-10 "
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -141,7 +141,7 @@ const Skills = () => {
       <div className="relative w-full overflow-hidden">
         <motion.div
           ref={trackRef}
-          className="flex gap-10 text-6xl text-yellow-400"
+          className="flex gap-4 text-6xl text-yellow-400"
           style={{ x, whiteSpace: "nowrap", willChange: "transform" }}
         >
           {repeated.map((s, i) => (

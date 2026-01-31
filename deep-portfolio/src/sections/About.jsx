@@ -15,7 +15,7 @@ const About = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-20 w-[220px] h-[220px] rounded-full bg-gradient-to-r from-gray-500 to-yellow-400 opacity-10 blur-[100px]" />
       </div>
 
-      <div className="relative z-10 max-w-6xl w-full mx-auto px-6 md:px-10 lg:px-12 py-20 flex  flex-col gap-12">
+      <div className="relative  z-10 max-w-6xl w-full mx-auto px-6 md:px-10 lg:px-12 py-10 flex  flex-col gap-12">
         <motion.div
           className="flex flex-col md:flex-row items-center md:items-stretch gap-8"
           initial={{ opacity: 0, y: 24 }}
@@ -39,7 +39,7 @@ const About = () => {
           <div className="flex-1 flex flex-col justify-center text-center md:text-left ">
             <h2
               className="text-4xl sm:text-5xl font-extrabold tracking-tight 
-              bg-clip-text  text-transparent bg-gradient-to-r from-yellow-400 via-white to-gray-400"
+              bg-clip-text  text-transparent bg-gradient-to-r from-yellow-400"
             >
               Deep Chand
             </h2>
@@ -78,7 +78,6 @@ const About = () => {
               ))}
             </div>
 
-     
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
               <a
                 href="#projects"
@@ -94,10 +93,6 @@ const About = () => {
               </a>
             </div>
           </div>
-
-          
-          
-          
         </motion.div>
 
         {/* about text */}
@@ -109,9 +104,11 @@ const About = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.4 }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold  mb-3 
+            <h3
+              className="text-2xl sm:text-3xl font-bold  mb-3 
             bg-clip-text  text-transparent bg-gradient-to-r from-yellow-400 via-white to-gray-400
-            ">
+            "
+            >
               About Me
             </h3>
             <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
@@ -126,7 +123,6 @@ const About = () => {
           </motion.div>
         </div>
       </div>
-      
     </section>
   );
 };

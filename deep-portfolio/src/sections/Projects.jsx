@@ -80,19 +80,18 @@ const Projects = () => {
     >
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center bg-black">
         <h2
-          className={`text-4xl mt-5 sm:text-5xl font-bold 
+          className={`text-4xl mt-6 sm:mt-5 text-center sm:text-5xl font-bold 
                    bg-clip-text text-transparent 
-                   bg-gradient-to-r from-yellow-400 via-white to-gray-400 z-10  ${
-                     isMobile ? "mt-4" : ""
-                   }`}
+                   bg-gradient-to-r from-yellow-400 via-white to-gray-400 z-10 
+                   `}
         >
           My Work
         </h2>
 
         <div
-          className={`relative w-full flex-1 flex items-center justify-center  ${
-            isMobile ? "-mt-4" : "mt-16"
-          }`}
+          className={`lg:relative w-full flex-1 flex items-center justify-center  
+         mt-4 sm:mt-16 
+          `}
         >
           {projects.map((project, idx) => (
             <div
@@ -113,11 +112,9 @@ const Projects = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 30 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className={`block text-center text-[clamp(1.5rem,4vw,3.2rem)]
+                    className={`block text-center sm:text-left text-[clamp(1.5rem,4vw,3.2rem)]
                      bg-clip-text  text-transparent bg-gradient-to-r from-yellow-400 via-white to-gray-400 sm:absolute sm:-top-21 sm:left-[35%] lg:left-[-5%]
-                      font-bangers italic font-semibold ${
-                        isMobile ? "-mt-25" : ""
-                      }`}
+                      font-bangers italic font-semibold static mt-2 mb-4`}
                     style={{
                       zIndex: 5,
                       textAlign: isMobile ? "center" : "left",
@@ -129,9 +126,9 @@ const Projects = () => {
               </AnimatePresence>
 
               <div
-                className={`relative w-full overflow-hidden bg-black shadow-2xl ${
+                className={`relative w-full flex items-center justify-center overflow-hidden bg-black shadow-2xl ${
                   isMobile ? "mb-6 rounded-lg" : "mb-10 sm:mb-12 rounded-xl"
-                } h-[62vh] sm:h-[66vh]`}
+                } h-[52vh] sm:h-[66vh]`}
                 style={{ zIndex: 10 }}
               >
                 <img
@@ -154,7 +151,7 @@ const Projects = () => {
         </div>
 
         <div 
-        className={`absolute ${isMobile ? "bottom-20" : "bottom-2"} z-50 pointer-events-auto`}
+        className={`lg:absolute ${isMobile ? "mb-6" : "bottom-2"} z-50 pointer-events-auto`}
         
         >
           <a

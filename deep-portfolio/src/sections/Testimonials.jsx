@@ -91,7 +91,7 @@ const Testimonials = () => {
               alt={testi.name}
               loading="lazy"
               className="w-16 h-16 rounded-full
-              border-2 border-white/40
+              border-2 border-yellow-400
               object-cover mb-4"
             />
 
@@ -101,7 +101,7 @@ const Testimonials = () => {
             </p>
 
             {/* Name */}
-            <h3 className="text-lg font-semibold text-white">{testi.name}</h3>
+            <h3 className="text-lg font-semibold text-yellow-400">{testi.name}</h3>
 
             {/* Role */}
             <p className="text-sm text-gray-400">{testi.role}</p>
