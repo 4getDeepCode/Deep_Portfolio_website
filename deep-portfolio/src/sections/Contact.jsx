@@ -72,8 +72,8 @@ const Contact = () => {
       {/* TOP CENTER HEADING */}
       <h2
         className="
-        top-8 sm:top-2
-        text-2xl sm:text-5xl font-semibold
+        top-4 sm:top-2 mb-8 tracking-wide text-center
+        text-4xl sm:text-5xl font-semibold
           absolute left-1/2 -translate-x-1/2
           text-4xl font-semibold tracking-wide
           bg-clip-text text-transparent
