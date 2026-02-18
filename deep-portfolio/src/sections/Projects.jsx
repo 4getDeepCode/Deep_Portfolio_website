@@ -5,6 +5,8 @@ import img1 from "../assets/img1.png";
 import img11 from "../assets/img11.png";
 import img2 from "../assets/img2.png";
 import img22 from "../assets/img22.png";
+import img33 from "../assets/image.png";
+import img3 from "../assets/image.png";
 
 const MH3 = motion.h3;
 
@@ -41,8 +43,14 @@ const Projects = () => {
       {
         title: "Shopping App",
         link: "https://shopping-app-1-v6hr.onrender.com",
-        bgColor: "#1f1f1f", // dark gray
+        bgColor: "#1f1f1f",
         image: isMobile ? img22 : img2,
+      },
+      {
+        title: "DeepSkill",
+        link: "https://deep-skill-mentorship-driven-platfo-ashy.vercel.app/",
+        bgColor: "#1f1f1f",
+        image: isMobile ? img33 : img3,
       },
     ],
     [isMobile],
@@ -98,10 +106,10 @@ const Projects = () => {
               key={project.title}
               className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 
                 ${
-                activeIndex === idx
-                  ? "opacity-100 z-20"
-                  : "opacity-0 z-0 sm:z-10"
-              }`}
+                  activeIndex === idx
+                    ? "opacity-100 z-20"
+                    : "opacity-0 z-0 sm:z-10"
+                }`}
               style={{ width: "85%", maxWidth: "1200px" }}
             >
               <AnimatePresence mode="wait">
@@ -150,9 +158,8 @@ const Projects = () => {
           ))}
         </div>
 
-        <div 
-        className={`lg:absolute ${isMobile ? "mb-6" : "bottom-2"} z-50 pointer-events-auto`}
-        
+        <div
+          className={`lg:absolute ${isMobile ? "mb-6" : "bottom-2"} z-50 pointer-events-auto`}
         >
           <a
             href={activeProject?.link}
