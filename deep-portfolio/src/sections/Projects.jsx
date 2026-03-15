@@ -7,6 +7,9 @@ import img2 from "../assets/img2.png";
 import img22 from "../assets/img22.png";
 import img33 from "../assets/image.png";
 import img3 from "../assets/image.png";
+import img44 from "../assets/DeepLMS.png";
+import img4 from "../assets/DeepLMS.png";
+
 
 const MH3 = motion.h3;
 
@@ -51,6 +54,12 @@ const Projects = () => {
         link: "https://deep-skill-mentorship-driven-platfo-ashy.vercel.app/",
         bgColor: "#1f1f1f",
         image: isMobile ? img33 : img3,
+      },
+      {
+        title: "DeepLMS",
+        link: "https://deep-lms-self.vercel.app/",
+        bgColor: "#1f1f1f",
+        image: isMobile ? img44 : img4,
       },
     ],
     [isMobile],
